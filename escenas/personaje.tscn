@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://cn7raqjwkd0wd"]
+[gd_scene load_steps=20 format=3 uid="uid://cn7raqjwkd0wd"]
 
+[ext_resource type="Script" uid="uid://brhxe2sd0q4c5" path="res://scripts/personaje.gd" id="1_3s3u2"]
 [ext_resource type="Texture2D" uid="uid://dsn5fipu84u1r" path="res://assets/personaje/idle/default_male_idle_expressive_00.png" id="1_pyv6t"]
 [ext_resource type="Texture2D" uid="uid://bog1tl4usr7fi" path="res://assets/personaje/idle/default_male_idle_expressive_01.png" id="2_wyluk"]
 [ext_resource type="Texture2D" uid="uid://c78hebi3d3rfj" path="res://assets/personaje/idle/default_male_idle_expressive_02.png" id="3_n8vmr"]
@@ -82,13 +83,15 @@ animations = [{
 radius = 56.0
 height = 160.0
 
-[node name="Personaje" type="CharacterBody2D"]
+[node name="Personaje" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 z_as_relative = false
+script = ExtResource("1_3s3u2")
+sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pcrpr")
 animation = &"run"
-frame_progress = 0.860274
+frame_progress = 0.531346
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 16)
