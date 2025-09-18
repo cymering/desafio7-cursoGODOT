@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://djyq2bgryxfe5"]
+
+[ext_resource type="Texture2D" uid="uid://batv5vwhrf1ud" path="res://assets/distractores/buzon.png" id="1_84qur"]
+
+[node name="Buzon" type="Sprite2D"]
+position = Vector2(-33, 27)
+texture = ExtResource("1_84qur")

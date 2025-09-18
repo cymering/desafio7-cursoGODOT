@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=4 uid="uid://c7m3rhy8t0ayx"]
+
+[ext_resource type="PackedScene" uid="uid://d0n43fodw7bl" path="res://escenas/nivel_1.tscn" id="1_dayui"]
+[ext_resource type="PackedScene" uid="uid://caa0bdaj6i0xc" path="res://escenas/fondo.tscn" id="1_v0a8y"]
+[ext_resource type="PackedScene" uid="uid://b2jkwh4yncvwt" path="res://escenas/paquete1.tscn" id="2_mf1lf"]
+[ext_resource type="PackedScene" uid="uid://djyq2bgryxfe5" path="res://escenas/buzon.tscn" id="4_t4q8c"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t4q8c"]
+scenes/1/scene = ExtResource("2_mf1lf")
+
+[sub_resource type="TileSet" id="TileSet_qnwci"]
+sources/0 = SubResource("TileSetScenesCollectionSource_t4q8c")
+
+[node name="Juego" type="Node2D"]
+
+[node name="Fondo" parent="." instance=ExtResource("1_v0a8y")]
+
+[node name="Objetos" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Objetos"]
+tile_map_data = PackedByteArray("AAAqAOX/AAAAAAAAAQBEACIAAAAAAAAAAQBEACMAAAAAAAAAAQDa/wYAAAAAAAAAAQDl/zYAAAAAAAAAAQBGACMAAAAAAAAAAQA=")
+tile_set = SubResource("TileSet_qnwci")
+
+[node name="Nivel" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Nivel 1" parent="Nivel" instance=ExtResource("1_dayui")]
+
+[node name="Buzon" parent="." instance=ExtResource("4_t4q8c")]
+position = Vector2(-452, 851)

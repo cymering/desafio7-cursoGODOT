@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://caa0bdaj6i0xc"]
+
+[ext_resource type="Texture2D" uid="uid://ccan21y75a2xd" path="res://assets/fondo.jpg" id="1_wgmnp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgmnp"]
+size = Vector2(5540.5, 152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ghod"]
+size = Vector2(179, 4326)
+
+[node name="Fondo" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(259, 183)
+
+[node name="TextureRect" type="TextureRect" parent="StaticBody2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2730.0
+offset_top = -2217.0
+offset_right = 2779.0
+offset_bottom = 2254.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wgmnp")
+
+[node name="Collision_top" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(28, -2164)
+shape = SubResource("RectangleShape2D_wgmnp")
+
+[node name="Collision_left" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2630.5, -7)
+shape = SubResource("RectangleShape2D_0ghod")
+
+[node name="Collision_right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2681, -23)
+shape = SubResource("RectangleShape2D_0ghod")
+
+[node name="Collision_bottom" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(37, 2199)
+shape = SubResource("RectangleShape2D_wgmnp")
