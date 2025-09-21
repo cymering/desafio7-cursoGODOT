@@ -4,7 +4,11 @@ En este prototipo se muestra un nivel del juego en el que el personaje debe repa
 La idea general es crear un juego de aventuras en la ciudad, donde el personaje deba tomar distintos roles y resolver problemas. 
 
 Créditos
+
 Idea: Cecilia Fernandez Cymering.
+
 Programación: Fran Ayrolo y Cecilia Fernandez Cymering.
+
 El fondo y los otros assets son de Freepik (Licencia gratis con atribución).
+
 El personaje fue creado por Daniel Benitez, en itch.io (https://dabntz.itch.io/).
