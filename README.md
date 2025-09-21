@@ -9,6 +9,6 @@ Idea: Cecilia Fernandez Cymering.
 
 Programación: Fran Ayrolo y Cecilia Fernandez Cymering.
 
-El fondo y los otros assets son de Freepik (Licencia gratis con atribución).
+El fondo y los otros assets son de Freepik.es (Licencia gratis con atribución, https://www.freepik.es/).
 
 El personaje fue creado por Daniel Benitez, en itch.io (https://dabntz.itch.io/).
