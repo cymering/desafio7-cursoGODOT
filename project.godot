@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="desafio6"
+<<<<<<< HEAD
 run/main_scene="uid://c7m3rhy8t0ayx"
+=======
+run/main_scene="uid://dfu66lxgvq5wq"
+>>>>>>> main
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
