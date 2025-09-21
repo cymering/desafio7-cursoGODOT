@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0n43fodw7bl"]
+[gd_scene load_steps=3 format=3 uid="uid://d0n43fodw7bl"]
 
 [ext_resource type="PackedScene" uid="uid://cn7raqjwkd0wd" path="res://escenas/personaje.tscn" id="1_xi31o"]
+[ext_resource type="Script" uid="uid://brhxe2sd0q4c5" path="res://escenas/personaje.gd" id="2_oh5vl"]
 
 [node name="Nivel 1" type="Node2D"]
 
-[node name="Personaje" parent="." instance=ExtResource("1_xi31o")]
+[node name="Personaje" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_xi31o")]
 z_index = 1
 position = Vector2(783, 612)
+script = ExtResource("2_oh5vl")
+sprite = NodePath("AnimatedSprite2D")
