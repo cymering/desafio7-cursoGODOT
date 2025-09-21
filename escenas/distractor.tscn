@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgcb4dfuqww03"]
+
+[ext_resource type="Script" uid="uid://c3l7yx30qh1c3" path="res://scripts/distractor.gd" id="1_rwaih"]
+
+[node name="Distractor" type="Node2D"]
+script = ExtResource("1_rwaih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
