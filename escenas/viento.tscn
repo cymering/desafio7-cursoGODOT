@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfu66lxgvq5wq"]
+[gd_scene load_steps=18 format=3 uid="uid://dfu66lxgvq5wq"]
 
+[ext_resource type="Script" uid="uid://0s66rs6ydyng" path="res://escenas/viento.gd" id="1_7770b"]
 [ext_resource type="Texture2D" uid="uid://cnv4ul55tmmlm" path="res://assets/paquetes/paquete4.png" id="1_dujyd"]
 [ext_resource type="Texture2D" uid="uid://uk6rlls26lkt" path="res://assets/fondo_intro.png" id="1_ea1gv"]
 [ext_resource type="Texture2D" uid="uid://cdkfn6aj4wdkk" path="res://assets/paquetes/paquete1.png" id="1_l6w55"]
@@ -8,6 +9,10 @@
 [ext_resource type="Script" uid="uid://b7aeyrcypir2d" path="res://escenas/animation_player.gd" id="4_nq38u"]
 [ext_resource type="Texture2D" uid="uid://1ga67lfp4vvb" path="res://assets/paquetes/paquete5.png" id="5_d8q5j"]
 [ext_resource type="Texture2D" uid="uid://b46krs1v4tv6l" path="res://assets/paquetes/paquete6.png" id="6_l6w55"]
+[ext_resource type="Texture2D" uid="uid://dvuew6iho1s23" path="res://assets/personaje/talk/default_male_talk_neutral_00.png" id="9_tha5r"]
+[ext_resource type="Texture2D" uid="uid://cwg7056mtgaa0" path="res://assets/personaje/talk/default_male_talk_neutral_01.png" id="10_7770b"]
+[ext_resource type="Texture2D" uid="uid://co3g0ohevaiib" path="res://assets/personaje/talk/default_male_talk_neutral_02.png" id="11_3qrjk"]
+[ext_resource type="Texture2D" uid="uid://bjle04qolsr78" path="res://assets/personaje/talk/default_male_talk_neutral_03.png" id="12_uccha"]
 
 [sub_resource type="Animation" id="Animation_nq38u"]
 length = 0.001
@@ -310,8 +315,29 @@ _data = {
 &"paquetes_volando": SubResource("Animation_dujyd")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3dac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_tha5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7770b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3qrjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uccha")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
 [node name="viento" type="Node2D"]
 rotation = -0.049939
+script = ExtResource("1_7770b")
 
 [node name="FondoIntro" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -360,3 +386,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_3y7nd")
 }
 script = ExtResource("4_nq38u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(98.7434, 869.013)
+rotation = 0.0488623
+scale = Vector2(4.42121, 4.23056)
+sprite_frames = SubResource("SpriteFrames_f3dac")
+animation = &"talk"
