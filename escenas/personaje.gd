@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var sprite: AnimatedSprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+#@export var sprite: AnimatedSprite2D
 
 var direccion = Vector2(0,0)
 var velocidad = 200
