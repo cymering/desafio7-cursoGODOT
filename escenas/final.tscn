@@ -1,0 +1,217 @@
+[gd_scene load_steps=14 format=3 uid="uid://byr18dfvc7m65"]
+
+[ext_resource type="Texture2D" uid="uid://uk6rlls26lkt" path="res://assets/fondo_intro.png" id="2_fxbf7"]
+[ext_resource type="Script" uid="uid://bvkhoq5gqv4hh" path="res://escenas/final.gd" id="2_yr42t"]
+[ext_resource type="Texture2D" uid="uid://coxax12ql6ba4" path="res://assets/paquetes/paquete3.png" id="7_t570c"]
+[ext_resource type="Texture2D" uid="uid://bwhd7wo500848" path="res://assets/paquetes/paquete2.png" id="8_on637"]
+[ext_resource type="Texture2D" uid="uid://cdkfn6aj4wdkk" path="res://assets/paquetes/paquete1.png" id="9_6ijun"]
+[ext_resource type="Texture2D" uid="uid://dvuew6iho1s23" path="res://assets/personaje/talk/default_male_talk_neutral_00.png" id="10_la2se"]
+[ext_resource type="Texture2D" uid="uid://cwg7056mtgaa0" path="res://assets/personaje/talk/default_male_talk_neutral_01.png" id="11_erw0v"]
+[ext_resource type="Texture2D" uid="uid://co3g0ohevaiib" path="res://assets/personaje/talk/default_male_talk_neutral_02.png" id="12_2afc7"]
+[ext_resource type="Texture2D" uid="uid://bjle04qolsr78" path="res://assets/personaje/talk/default_male_talk_neutral_03.png" id="13_gpxug"]
+
+[sub_resource type="Animation" id="Animation_nq38u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("paquetes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1488, 568)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("paquetes:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("paquetes:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("paquetes:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_38yfx"]
+resource_name = "cargar_paquetes"
+length = 8.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"talk", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("paquetes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.24, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1488, 568), Vector2(1376, 464), Vector2(1328, 480)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("paquetes:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.24, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.785397, 1.83259]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("paquetes:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.24, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.375, 0.375)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("paquetes:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3y7nd"]
+_data = {
+&"RESET": SubResource("Animation_nq38u"),
+&"cargar_paquetes": SubResource("Animation_38yfx")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yr42t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_la2se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_erw0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2afc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gpxug")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="Final" type="Node2D"]
+script = ExtResource("2_yr42t")
+
+[node name="FondoIntro" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(566.909, 452.465)
+scale = Vector2(1.24858, 1.13372)
+texture = ExtResource("2_fxbf7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3y7nd")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1651.06, 522.781)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_yr42t")
+animation = &"talk"
+flip_h = true
+
+[node name="paquetes" type="Node2D" parent="."]
+visible = false
+position = Vector2(1488, 568)
+
+[node name="Paquete3" type="Sprite2D" parent="paquetes"]
+scale = Vector2(0.686589, 0.559925)
+texture = ExtResource("7_t570c")
+
+[node name="Paquete2" type="Sprite2D" parent="paquetes"]
+position = Vector2(0, -66)
+scale = Vector2(0.548048, 0.526706)
+texture = ExtResource("8_on637")
+
+[node name="Paquete1" type="Sprite2D" parent="paquetes"]
+position = Vector2(-11.5625, -119.031)
+scale = Vector2(0.0433191, 0.0502148)
+texture = ExtResource("9_6ijun")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 952.0
+offset_top = 56.0
+offset_right = 1446.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 45
+text = "Gracias por ayudarme.
+Nos vemos la próxima!"
+horizontal_alignment = 1
