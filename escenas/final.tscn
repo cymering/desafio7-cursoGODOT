@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://byr18dfvc7m65"]
+[gd_scene load_steps=15 format=3 uid="uid://byr18dfvc7m65"]
 
 [ext_resource type="Texture2D" uid="uid://uk6rlls26lkt" path="res://assets/fondo_intro.png" id="2_fxbf7"]
 [ext_resource type="Script" uid="uid://bvkhoq5gqv4hh" path="res://escenas/final.gd" id="2_yr42t"]
+[ext_resource type="AudioStream" uid="uid://c7xstq8l044pd" path="res://assets/sonido/voz_final.mp3" id="7_on637"]
 [ext_resource type="Texture2D" uid="uid://coxax12ql6ba4" path="res://assets/paquetes/paquete3.png" id="7_t570c"]
 [ext_resource type="Texture2D" uid="uid://bwhd7wo500848" path="res://assets/paquetes/paquete2.png" id="8_on637"]
 [ext_resource type="Texture2D" uid="uid://cdkfn6aj4wdkk" path="res://assets/paquetes/paquete1.png" id="9_6ijun"]
@@ -187,6 +188,10 @@ scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_yr42t")
 animation = &"talk"
 flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
+stream = ExtResource("7_on637")
+autoplay = true
 
 [node name="paquetes" type="Node2D" parent="."]
 visible = false

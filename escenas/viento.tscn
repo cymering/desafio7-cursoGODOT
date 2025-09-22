@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dfu66lxgvq5wq"]
+[gd_scene load_steps=19 format=3 uid="uid://dfu66lxgvq5wq"]
 
 [ext_resource type="Script" uid="uid://0s66rs6ydyng" path="res://escenas/viento.gd" id="1_7770b"]
 [ext_resource type="Texture2D" uid="uid://cnv4ul55tmmlm" path="res://assets/paquetes/paquete4.png" id="1_dujyd"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cwg7056mtgaa0" path="res://assets/personaje/talk/default_male_talk_neutral_01.png" id="10_7770b"]
 [ext_resource type="Texture2D" uid="uid://co3g0ohevaiib" path="res://assets/personaje/talk/default_male_talk_neutral_02.png" id="11_3qrjk"]
 [ext_resource type="Texture2D" uid="uid://bjle04qolsr78" path="res://assets/personaje/talk/default_male_talk_neutral_03.png" id="12_uccha"]
+[ext_resource type="AudioStream" uid="uid://b7n4ev8sx2dd0" path="res://assets/sonido/voz_intro.mp3" id="14_3qrjk"]
 
 [sub_resource type="Animation" id="Animation_nq38u"]
 length = 0.001
@@ -407,3 +408,7 @@ rotation = 0.0488623
 scale = Vector2(4.42121, 4.23056)
 sprite_frames = SubResource("SpriteFrames_f3dac")
 animation = &"talk"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimatedSprite2D"]
+stream = ExtResource("14_3qrjk")
+autoplay = true

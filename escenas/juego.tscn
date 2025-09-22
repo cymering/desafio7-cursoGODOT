@@ -1,35 +1,19 @@
-[gd_scene load_steps=8 format=4 uid="uid://c7m3rhy8t0ayx"]
+[gd_scene load_steps=5 format=3 uid="uid://c7m3rhy8t0ayx"]
 
 [ext_resource type="Script" uid="uid://desy1ln4selhp" path="res://escenas/juego.gd" id="1_qnwci"]
 [ext_resource type="PackedScene" uid="uid://caa0bdaj6i0xc" path="res://escenas/fondo.tscn" id="1_v0a8y"]
-[ext_resource type="PackedScene" uid="uid://b2jkwh4yncvwt" path="res://escenas/paquete.tscn" id="2_mf1lf"]
-[ext_resource type="PackedScene" uid="uid://djyq2bgryxfe5" path="res://escenas/buzon.tscn" id="4_t4q8c"]
+[ext_resource type="AudioStream" uid="uid://b6l7klv46hujr" path="res://assets/sonido/Demented 90s Cartoon Theme - Rod Kim.mp3" id="4_t4q8c"]
 [ext_resource type="PackedScene" uid="uid://cn7raqjwkd0wd" path="res://escenas/personaje.tscn" id="5_qnwci"]
-
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_t4q8c"]
-scenes/1/scene = ExtResource("2_mf1lf")
-
-[sub_resource type="TileSet" id="TileSet_qnwci"]
-sources/0 = SubResource("TileSetScenesCollectionSource_t4q8c")
 
 [node name="Juego" type="Node2D"]
 script = ExtResource("1_qnwci")
 
 [node name="Fondo" parent="." instance=ExtResource("1_v0a8y")]
 
-[node name="Objetos" type="Node2D" parent="."]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="Objetos"]
-tile_map_data = PackedByteArray("AAAqAOX/AAAAAAAAAQBEACIAAAAAAAAAAQBEACMAAAAAAAAAAQDa/wYAAAAAAAAAAQDl/zYAAAAAAAAAAQBGACMAAAAAAAAAAQA=")
-tile_set = SubResource("TileSet_qnwci")
-
 [node name="Nivel" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
 [node name="Personaje" parent="Nivel" instance=ExtResource("5_qnwci")]
-
-[node name="Buzon" parent="." instance=ExtResource("4_t4q8c")]
-position = Vector2(-452, 851)
 
 [node name="GrupoDeMarcadores" type="Node2D" parent="."]
 
@@ -60,3 +44,7 @@ offset_right = -104.0
 offset_bottom = -302.0
 theme_override_font_sizes/font_size = 50
 text = "asdfghjk"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t4q8c")
+autoplay = true
