@@ -13,6 +13,6 @@ El fondo y los otros assets son de Freepik.es (Licencia gratis con atribución, 
 
 El personaje fue creado por Daniel Benitez, en itch.io (https://dabntz.itch.io/).
 
-Voz del personaje: Creada con TTSmaker (https://ttsmaker.com/).
+Voz del personaje creada con TTSmaker (https://ttsmaker.com/).
 
-
+Música: Demented 90s Cartoon Theme - Rod Kim. Youtube Audio Library.
