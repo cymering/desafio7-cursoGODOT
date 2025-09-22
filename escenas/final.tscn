@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://byr18dfvc7m65"]
+[gd_scene load_steps=17 format=3 uid="uid://byr18dfvc7m65"]
 
 [ext_resource type="Texture2D" uid="uid://uk6rlls26lkt" path="res://assets/fondo_intro.png" id="2_fxbf7"]
 [ext_resource type="Script" uid="uid://bvkhoq5gqv4hh" path="res://escenas/final.gd" id="2_yr42t"]
@@ -168,6 +168,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="FontVariation" id="FontVariation_on637"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ijun"]
+font = SubResource("FontVariation_on637")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
 [node name="Final" type="Node2D"]
 script = ExtResource("2_yr42t")
 
@@ -220,3 +227,19 @@ theme_override_font_sizes/font_size = 45
 text = "Gracias por ayudarme.
 Nos vemos la próxima!"
 horizontal_alignment = 1
+
+[node name="creditos" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 663.0
+offset_right = 1305.0
+offset_bottom = 956.0
+theme_override_font_sizes/font_size = 45
+text = "Créditos
+
+Idea: Cecilia Fernandez Cymering.
+Programación: Fran Ayrolo y Cecilia Fernandez Cymering.
+El fondo y los otros assets son de Freepik.es (Licencia gratis con atribución, https://www.freepik.es/).
+El personaje fue creado por Daniel Benitez, en itch.io (https://dabntz.itch.io/).
+Voz del personaje creada con TTSmaker (https://ttsmaker.com/).
+Música: Demented 90s Cartoon Theme - Rod Kim. Youtube Audio Library."
+label_settings = SubResource("LabelSettings_6ijun")
